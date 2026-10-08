@@ -1,0 +1,132 @@
+project:
+  name: AgroShield
+  version: "0.1.0"
+
+target_crops:
+  - cassava
+  - maize
+  - beans
+  - coffee
+  - banana
+
+dataset_policy:
+  prioritize_regional_data: true
+  prioritize_field_images: true
+  preserve_original_data: true
+  require_provenance: true
+  require_license_review: true
+  prevent_duplicate_images: true
+  prevent_data_leakage: true
+
+sources:
+
+  - id: cassava_makerere_nacrri
+    crop: cassava
+    source_type: regional
+    platform: Kaggle
+    status: candidate
+    priority: critical
+    geographic_focus:
+      - Uganda
+    description: >
+      Cassava leaf disease dataset collected during surveys in Uganda,
+      with images largely crowdsourced from farmers and expert annotation
+      involving NaCRRI and Makerere AI Lab.
+    source_url: "https://www.kaggle.com/competitions/cassava-leaf-disease-classification"
+    license_status: review_required
+    downloaded: false
+
+  - id: plantvillage
+    crop: multiple
+    source_type: global
+    platform: PlantVillage
+    status: candidate
+    priority: high
+    geographic_focus:
+      - global
+    description: >
+      Open plant disease image repository containing healthy and diseased
+      plant images across multiple crops.
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license_status: review_required
+    downloaded: false
+
+  - id: coffee_disease_candidate
+    crop: coffee
+    source_type: global
+    platform: Kaggle
+    status: candidate
+    priority: medium
+    geographic_focus:
+      - international
+    description: >
+      Candidate coffee disease and pest imagery covering coffee rust
+      and leaf miner.
+    source_url: "https://www.kaggle.com/alvarole/coffee-leaves-disease/notebooks"
+    license_status: review_required
+    downloaded: false
+
+  - id: banana_disease_candidate
+    crop: banana
+    source_type: global
+    platform: Mendeley/Kaggle
+    status: candidate
+    priority: medium
+    geographic_focus:
+      - international
+    description: >
+      Candidate banana disease recognition imagery including healthy
+      leaves and multiple banana disease/pest categories.
+    source_url: "https://data.mendeley.com/"
+    license_status: review_required
+    downloaded: false
+
+  - id: maize_open_sources
+    crop: maize
+    source_type: global
+    platform: multiple
+    status: candidate
+    priority: medium
+    geographic_focus:
+      - international
+    description: >
+      Candidate open maize disease datasets to supplement regional
+      imagery.
+    source_url: ""
+    license_status: review_required
+    downloaded: false
+
+  - id: beans_open_sources
+    crop: beans
+    source_type: global
+    platform: multiple
+    status: candidate
+    priority: medium
+    geographic_focus:
+      - international
+    description: >
+      Candidate open bean disease datasets to supplement regional
+      imagery.
+    source_url: ""
+    license_status: review_required
+    downloaded: false
+
+future_collection:
+  enabled: true
+  geographic_focus:
+    - Uganda
+    - East Africa
+  collection_fields:
+    - country
+    - district
+    - subcounty
+    - crop
+    - variety
+    - disease
+    - severity
+    - latitude
+    - longitude
+    - capture_date
+    - device
+    - collection_environment
+    - expert_verification

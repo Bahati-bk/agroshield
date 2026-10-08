@@ -1,0 +1,30 @@
+crops:
+
+  cassava:
+
+    diseases:
+
+      cassava_bacterial_blight:
+        display_name: Cassava Bacterial Blight
+        abbreviation: CBB
+        category: disease
+
+      cassava_brown_streak_disease:
+        display_name: Cassava Brown Streak Disease
+        abbreviation: CBSD
+        category: disease
+
+      cassava_green_mottle:
+        display_name: Cassava Green Mottle
+        abbreviation: CGM
+        category: disease
+
+      cassava_mosaic_disease:
+        display_name: Cassava Mosaic Disease
+        abbreviation: CMD
+        category: disease
+
+      healthy:
+        display_name: Healthy Cassava Leaf
+        abbreviation: HEALTHY
+        category: healthy

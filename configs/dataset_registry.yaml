@@ -1,0 +1,42 @@
+datasets:
+
+  cassava_makerere_nacrri_2020:
+    source_dataset: kaggle_cassava_leaf_disease_classification
+
+    source_host: Kaggle
+
+    source_url: https://www.kaggle.com/competitions/cassava-leaf-disease-classification
+
+    original_owner:
+      - Makerere University AI Lab
+      - National Crops Resources Research Institute
+
+    country: Uganda
+
+    collection_context: >
+      Images collected during a regular survey in Uganda.
+      The dataset description states that many images were
+      crowdsourced from farmers' gardens.
+
+    annotation_source: >
+      Experts at the National Crops Resources Research Institute
+      in collaboration with the Makerere University AI Lab.
+
+    source_license: competition_rules
+
+    license_status: review_required
+
+    commercial_use_status: unknown
+
+    redistribution_status: unknown
+
+    label_status: source_mapping_verified
+
+    provenance_status: verified_with_license_review
+
+    citation_required: true
+
+    notes: >
+      Do not treat this dataset as commercially redistributable
+      until the applicable Kaggle competition terms and underlying
+      dataset rights have been reviewed.
