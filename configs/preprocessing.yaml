@@ -1,0 +1,67 @@
+image:
+  input_size: 224
+  channels: 3
+  color_mode: RGB
+
+resize:
+  evaluation_size: 256
+  interpolation: bilinear
+  crop_size: 224
+
+normalization:
+  type: imagenet
+  mean:
+    - 0.485
+    - 0.456
+    - 0.406
+  std:
+    - 0.229
+    - 0.224
+    - 0.225
+
+training_augmentation:
+  enabled: true
+
+  random_resized_crop:
+    enabled: true
+    size: 224
+    scale:
+      - 0.80
+      - 1.00
+    ratio:
+      - 0.90
+      - 1.10
+
+  horizontal_flip:
+    enabled: true
+    probability: 0.50
+
+  vertical_flip:
+    enabled: true
+    probability: 0.20
+
+  rotation:
+    enabled: true
+    degrees: 15
+
+  color_jitter:
+    enabled: true
+    brightness: 0.15
+    contrast: 0.15
+    saturation: 0.10
+    hue: 0.02
+
+validation_augmentation:
+  enabled: false
+
+test_augmentation:
+  enabled: false
+
+deployment:
+  expected_input_shape:
+    - 1
+    - 3
+    - 224
+    - 224
+  color_mode: RGB
+  normalization: imagenet
